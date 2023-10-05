@@ -3,7 +3,9 @@
     "cypress:open": "cypress open"
   },
   "devDependencies": {
+    "@types/pg": "^8.10.3",
     "cypress": "^12.17.3",
+    "pg": "^8.11.3",
     "typescript": "^5.1.6"
   }
 }

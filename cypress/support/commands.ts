@@ -35,7 +35,7 @@ declare global {
        */
       login(options?: Credentials): Chainable<Subject>;
       manualLogin(options?: Credentials): Chainable<Subject>;
-
+      queryDatabase(query: string): Chainable<any>;
       // /**
       //  * @memberOf Cypress.Chainable
       //  */
@@ -138,5 +138,10 @@ Cypress.Commands.add('manualLogin', (credentials: Partial<Credentials> = {}) => 
 //   LoginPageObject.logoutBtn().click();
 //   cy.url().should('match', LoginPageObject.URL_MATCHES);
 // });
+
+
+Cypress.Commands.add('queryDatabase', (query) => {
+  return cy.task('queryDB', query);
+});
 
 export { };
